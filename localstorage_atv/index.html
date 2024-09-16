@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carro LocalStorage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Cadastre aqui seu carro</h1>
+
+    <input type="text" id="tipo" title="Tipo do carro" placeholder="Tipo do carro">
+    <br>
+    <br>
+    <input type="text" id="modelo" title="Modelo do carro" placeholder="Modelo do carro">
+    <br>
+    <br>
+    <input type="text" id="cor" title="Cor do carro" placeholder="Cor do carro">
+    <br>
+    <br>
+
+     <button onclick="send()">
+            Enviar
+        </button>
+
+
+    <script>
+
+        function send(){
+
+            const tipo = document.getElementById('tipo').value;
+            const modelo = document.getElementById('modelo').value;
+            const cor = document.getElementById('cor').value;
+            console.log(tipo);
+            console.log(modelo);
+            console.log(cor);
+
+            const car= {
+                tipo: tipo,
+                modelo: modelo,
+                cor: cor
+             };
+
+             console.log(car);
+
+    const carString = JSON.stringify(car);
+    localStorage.setItem('car', carString);
+
+    console.log(car);
+        console.log(carString);
+
+        }
+        
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+body{
+
+background-color: rgb(141, 0, 0);
+color: rgb(255, 255, 255);
+text-align: center;
+align-items: center;
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+input{
+
+    font-size: 20px;
+    border-radius: 4px;
+}
+
+button{
+    color: rgb(122, 122, 122);
+    font-size: 20px;
+    
+}
